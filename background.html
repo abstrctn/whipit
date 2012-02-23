@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Background Page</title>
+    <script src="background.js"></script>
+  </head>
+  <body>
+<script type="text/javascript">
+  chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+    if (request.method == "getStatus")
+      sendResponse({status: localStorage['whipit']});
+    else
+      sendResponse({});
+  });
+</script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "Whip It!",
+  "version": "0.1.0",
+  "description": "Papayawhipify me, cap'n!",
+  "browser_action": {
+    "default_icon": "papaya.png",
+    "default_title": "Whip It!"
+  },
+  "background_page": "background.html",
+  "content_scripts": [
+    { 
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
